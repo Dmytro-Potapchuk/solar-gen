@@ -1,0 +1,5 @@
+.Survey {
+display: flex;
+    justify-content: space-between;
+    background: #61dafb;
+}

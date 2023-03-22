@@ -1,0 +1,43 @@
+.form-group {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-control {
+
+    border-radius: 0;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    padding: 10px;
+    width: 10%;
+}
+
+.custom-file-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*.btn-primary {*/
+/*    background-color: #0099cc;*/
+/*    border: none;*/
+/*    border-radius: 0;*/
+/*    color: #fff;*/
+/*    font-size: 14px;*/
+/*    font-weight: bold;*/
+/*    padding: 12px 20px;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.btn-primary:hover {*/
+/*    background-color: #006699;*/
+/*    cursor: pointer;*/
+/*}*/

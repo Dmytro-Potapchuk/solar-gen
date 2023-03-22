@@ -1,0 +1,44 @@
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    margin-top: 200px;
+}
+
+.footer h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 24px;
+
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+}
+
+.footer-bottom {
+    background-color: #222;
+    color: #ccc;
+    padding: 10px 0;
+    margin-top: 25px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin-bottom: 0;
+    text-align: center;
+}
