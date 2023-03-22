@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useLocation} from "react-router-dom";
 
 const Proposal = () => {
     const [firstName, setFirstName] = useState('');
@@ -6,6 +7,11 @@ const Proposal = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
+
+
+    const {state} = useLocation()
+    console.log(state);
+
 
     const handleSubmit = (event) => {
         event.preventDefault();

@@ -2,28 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './HomePage.css'
 import {Button} from "react-bootstrap";
-import axios from "axios";
+
 import dom from '../../image/png/dom.png'
 import firma from '../../image/png/firma-removebg-preview.png'
 const HomePage = () => {
-    const [selectedOption, setSelectedOption] = useState("");
 
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-    };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
 
-        const formData = { selectedOption };
-        axios.post("/api/send-email", formData)
-            .then((response) => {
-                console.log("Email sent successfully");
-            })
-            .catch((error) => {
-                console.log("Error sending email: ", error);
-            });
-    };
 
     return (
         <div className={'text-main'}>
@@ -37,7 +22,8 @@ const HomePage = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>DOMU</b></p>
-                    <Link to="/private">
+                    <Link to="/private" state={{home: "dom" }}>
+
                         <img className={'dom-firma-img'} src={dom}/>
                     </Link>
                     <div className="d-flex justify-content-center">
@@ -46,14 +32,17 @@ const HomePage = () => {
 
                 <div className={'firma'}>
                     <p><b>FIRMY</b></p>
-                    <Link to="/commercial">
+                    <Link to="/commercial"  state={{home: "firma"}}>
                         <img className={'dom-firma-img'} src={firma} alt="Firma"/>
 
                     </Link>
 
                 </div>
             </div>
-                        <Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>
+                        {/*<Button className={'m-5'} variant={"primary"} */}
+                        {/*        // onClick={() => handleOptionSelect("Dom")}>*/}
+                            {/*Cofni<*/}
+                            {/*/Button>*/}
 
             {/*<div className="d-flex justify-content-center">*/}
             {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}

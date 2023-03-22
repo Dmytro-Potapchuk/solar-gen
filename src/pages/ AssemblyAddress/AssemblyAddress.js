@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import next from "../../image/png/next.png";
 import {Link} from "react-router-dom";
-import roof2 from "../../image/roof/roof-15.png";
+
 
 const AssemblyAddress = () => {
     const [address, setAddress] = useState('');

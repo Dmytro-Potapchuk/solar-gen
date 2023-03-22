@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 
 
@@ -15,24 +15,9 @@ import axios from "axios";
 
 const RoofCover = () => {
 
-    const [selectedOption, setSelectedOption] = useState("");
+    const {state} = useLocation()
+    console.log(state);
 
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-    };
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-
-        const formData = { selectedOption };
-        axios.post("/api/send-email", formData)
-            .then((response) => {
-                console.log("Email sent successfully");
-            })
-            .catch((error) => {
-                console.log("Error sending email: ", error);
-            });
-    };
 
     return (
 
@@ -80,7 +65,7 @@ const RoofCover = () => {
                     </Link>
                 </div>
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>
+            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
 
             {/*<div className="d-flex justify-content-center">*/}
             {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
