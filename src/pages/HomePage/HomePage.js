@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import './HomePage.css'
-import {Button} from "react-bootstrap";
+// import {Button} from "react-bootstrap";
 
 import dom from '../../image/png/dom.png'
 import firma from '../../image/png/firma-removebg-preview.png'
@@ -22,7 +22,7 @@ const HomePage = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>DOMU</b></p>
-                    <Link to="/private" state={{home: "dom" }}>
+                    <Link to="/private" state={{id: "dom" }}>
 
                         <img className={'dom-firma-img'} src={dom}/>
                     </Link>
@@ -32,7 +32,7 @@ const HomePage = () => {
 
                 <div className={'firma'}>
                     <p><b>FIRMY</b></p>
-                    <Link to="/commercial"  state={{home: "firma"}}>
+                    <Link to="/commercial"  state={{id: "firma"}}>
                         <img className={'dom-firma-img'} src={firma} alt="Firma"/>
 
                     </Link>

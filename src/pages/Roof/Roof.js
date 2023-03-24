@@ -8,7 +8,7 @@ import roof3 from "../../image/roof/roof30.png";
 const Roof = () => {
 
     const {state} = useLocation()
-    console.log(state);
+
 
     return (
 
@@ -24,7 +24,7 @@ const Roof = () => {
                 <div>
                     <p><b>Płaski</b></p>
                     <Link to="/cover" state={{...state, roof: "Płaski"}}>
-                        <img className={'dom-firma-img'} src={roof1}/>
+                        <img className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -32,13 +32,13 @@ const Roof = () => {
 
                 <div className={'firma'}>
                     <p><b>Nachylony(&lt;15*)</b></p>
-                    <Link to="/cover" state={{...state, roof: "Nachylony"}}>
+                    <Link to="/cover" state={{...state, roof: "Nachylony(<15*)"}}>
                         <img className={'dom-firma-img'} src={roof2} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>Nachylony(&gt;15*)</b></p>
-                    <Link to="/cover" state={{...state, roof: "Nachylony>"}}>
+                    <Link to="/cover" state={{...state, roof: "Nachylony(>15*)>"}}>
                         <img className={'dom-firma-img'} src={roof3} alt="Firma"/>
                     </Link>
                 </div>

@@ -1,5 +1,5 @@
 import {Link, useLocation} from "react-router-dom";
-import React, {useState} from "react";
+
 
 import '../HomePage/HomePage.css'
 import dom from "..//../image/house/house-1.png";
@@ -11,7 +11,6 @@ import dom34 from "..//../image/house/house-3-4.png";
 const PrivateHouses = () => {
 
     const {state} = useLocation();
-
 
 
 
@@ -27,15 +26,15 @@ const PrivateHouses = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>Dom jednorodzinny</b></p>
-                    <Link to="/roof" state={{...state, type: "private"}}>
-                        <img className={'dom-firma-img'} src={dom} />
+                    <Link to="/roof" state={{...state, type: "Dom jednorodzinny"}}>
+                        <img className={'dom-firma-img'} src={dom} alt={''} />
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
                 </div>
                 <div className={'firma'}>
                 <p><b>Dom bliźniak</b></p>
-                    <Link to="/roof" state={{...state, type: "blizniak"}}>
+                    <Link to="/roof" state={{...state, type: "Dom bliźniak"}}>
                         <img className={'dom-firma-img'} src={dom2} alt="Firma"/>
                     </Link>
 
@@ -44,7 +43,7 @@ const PrivateHouses = () => {
                     <p><b>Dom
                         wielorodzinny/
                         blok/kamienica</b></p>
-                    <Link to="/roof" state={{...state, type: "wielorodzinny"}}>
+                    <Link to="/roof" state={{...state, type: "Dom wielorodzinny/ blok/kamienica"}}>
                         <img className={'dom-firma-img'} src={dom3} alt="Firma"/>
                     </Link>
 
@@ -54,7 +53,7 @@ const PrivateHouses = () => {
 
                         (pominąć 2 i 3.
                         przejść do pkt4)</b></p>
-                    <Link to="/roof" state={{...state, type: "pominąć"}}>
+                    <Link to="/roof" state={{...state, type: "Na gruncie (pominąć 2 i 3. przejść do pkt4)"}}>
                         <img className={'dom-firma-img'} src={dom34} alt="Firma"/>
                     </Link>
 

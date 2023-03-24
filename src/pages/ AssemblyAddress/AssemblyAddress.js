@@ -1,45 +1,46 @@
-import React, { useState } from 'react';
-import next from "../../image/png/next.png";
-import {Link} from "react-router-dom";
-
+import {Link, useLocation} from "react-router-dom";
+import {useState} from "react";
 
 const AssemblyAddress = () => {
-    const [address, setAddress] = useState('');
+    const { state } = useLocation();
+    const [address, setAddress] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // tutaj dodaj logikę do wysłania adresu na email
-
-
-
         console.log(`Adres: ${address}`);
     };
 
     return (
         <div>
             <div className={"dom-firma"}>
-                <div className={'firma'}>
-                    <p><b>Tak, proszę o ofertę.</b></p>
-                    <Link to="/proposal">
-                        <img className={'dom-firma-img'} src={next} alt="Firma"/>
-                    </Link>
+                <div className={"firma"}>
+                    <p>
+                        <b>Adres montażu elektrowni fotowoltaicznej:</b>
+                    </p>
                 </div>
-
             </div>
 
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="address"></label>
+                <br />
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Ul. Nr Kod pocztowy, miejscowość"
+                    value={address}
+                    onChange={(event) => setAddress(event.target.value)}
+                />
+                <br />
+                <button type="submit">
 
-        <form onSubmit={handleSubmit}>
-
-
-            <label htmlFor="address">Adres montażu elektrowni fotowoltaicznej:</label>
-            <br />
-            <input type="text" id="address" name="address" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Ul. Nr Kod pocztowy, miejscowość" />
-            <br />
-
-            <button type="submit">Wyślij</button>
-        </form>
+                    <Link to="/proposal" state={{ ...state, address: address }}>
+                        Wyślij
+                    </Link>
+                </button>
+            </form>
         </div>
     );
 };
 
-export {AssemblyAddress};
+export { AssemblyAddress };

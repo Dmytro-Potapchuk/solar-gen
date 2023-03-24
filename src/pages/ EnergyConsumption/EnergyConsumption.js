@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+
+import {Link, useLocation} from "react-router-dom";
 import one from "../../image/energy/one.png";
 import two from "../../image/energy/two.png";
 import there from "../../image/energy/three.png";
@@ -10,28 +10,29 @@ import axios from "axios";
 
 const EnergyConsumption = () => {
 
+    const {state} = useLocation()
+    console.log(state);
 
 
-
-    const [selectedOption, setSelectedOption] = useState("");
-
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-    };
-
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-
-        const formData = { selectedOption };
-        axios.post("/api/send-email", formData)
-            .then((response) => {
-                console.log("Email sent successfully");
-            })
-            .catch((error) => {
-                console.log("Error sending email: ", error);
-            });
-    };
+    // const [selectedOption, setSelectedOption] = useState("");
+    //
+    // const handleOptionSelect = (option) => {
+    //     setSelectedOption(option);
+    // };
+    //
+    //
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault();
+    //
+    //     const formData = { selectedOption };
+    //     axios.post("/api/send-email", formData)
+    //         .then((response) => {
+    //             console.log("Email sent successfully");
+    //         })
+    //         .catch((error) => {
+    //             console.log("Error sending email: ", error);
+    //         });
+    // };
 
     return (
 
@@ -46,7 +47,7 @@ const EnergyConsumption = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>1 osoba ~1700kWh</b></p>
-                    <Link to="/storage">
+                    <Link to="/storage" state={{...state, energy: "1 osoba ~1700kWh"}}>
                         <img className={'dom-firma-img'} src={one}/>
                     </Link>
                     <div className="d-flex justify-content-center">
@@ -56,28 +57,28 @@ const EnergyConsumption = () => {
                 <div className={'firma'}>
                     <p><b>2 osoby
                         ~2500kWh</b></p>
-                    <Link to="/storage">
+                    <Link to="/storage" state={{...state, energy: "2 osoby ~2500kWh"}}>
                         <img className={'dom-firma-img'} src={two} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>3 osoby
                         - 3300kWh</b></p>
-                    <Link to="/storage">
+                    <Link to="/storage" state={{...state, energy: "3 osoby - 3300kWh"}}>
                         <img className={'dom-firma-img'} src={there} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>4 osoby
                         ~4100kWh</b></p>
-                    <Link to="/storage">
+                    <Link to="/storage" state={{...state, energy: "4 osoby ~4100kWh"}}>
                         <img className={'dom-firma-img'} src={foo} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>≥5 osób
                         ≥ 5000kWh</b></p>
-                    <Link to="/storage">
+                    <Link to="/storage" state={{...state, energy: "≥5 osób ≥ 5000kWh"}}>
                         <img className={'dom-firma-img'} src={five} alt="Firma"/>
                     </Link>
                 </div>
@@ -88,7 +89,7 @@ const EnergyConsumption = () => {
 
 
 
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>
+            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
 
             {/*<div className="d-flex justify-content-center">*/}
             {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}

@@ -14,6 +14,9 @@ import {EnergyStorage} from "./pages/ EnergyStorage/EnergyStorage";
 import {Financing} from "./pages/ Financing/Financing";
 import {AssemblyAddress} from "./pages/ AssemblyAddress/AssemblyAddress";
 import {Proposal} from "./pages/Proposal/Proposal";
+import {ElectricityCompany} from "./pages/ElectricityCompany/ElectricityCompany";
+import {RoofCoverCompany} from "./pages/RoofCoverCompany/RoofCoverCompany";
+import {RoofCompany} from "./pages/RoofCompany/RoofCompany";
 
 
 function App() {
@@ -34,7 +37,12 @@ function App() {
                  <Route path={'/storage'} element={<EnergyStorage/>}/>
                 <Route path={'/financing'} element={<Financing/>}/>
                 <Route path={'/address'} element={<AssemblyAddress/>}/>
-                 <Route path={'/proposal'} element={<Proposal/>}/>
+                <Route path={'/proposal'} element={<Proposal/>}/>
+
+
+            <Route path={'/roof-company'} element={<RoofCompany/>}/>
+            <Route path={'/roof-cover-company'} element={<RoofCoverCompany/>}/>\
+            <Route path={'/electricity-company'} element={<ElectricityCompany/>}/>
 
         </Routes>
 

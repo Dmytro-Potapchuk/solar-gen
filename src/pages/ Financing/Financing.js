@@ -1,32 +1,37 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
 
-import roof1 from "../../image/roof/roof-0.png";
-import roof2 from "../../image/roof/roof-15.png";
-import roof3 from "../../image/roof/roof30.png";
-import {Button} from "react-bootstrap";
-import axios from "axios";
+import {Link, useLocation} from "react-router-dom";
+
+import cash from "../../image/finanse/cech.png";
+import kredyt from "../../image/finanse/kredyt.png";
+
+// import {Button} from "react-bootstrap";
+// import axios from "axios";
 
 const Financing = () => {
 
-    const [selectedOption, setSelectedOption] = useState("");
+    const {state} = useLocation()
+    console.log(state);
 
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-    };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
 
-        const formData = { selectedOption };
-        axios.post("/api/send-email", formData)
-            .then((response) => {
-                console.log("Email sent successfully");
-            })
-            .catch((error) => {
-                console.log("Error sending email: ", error);
-            });
-    };
+    // const [selectedOption, setSelectedOption] = useState("");
+    //
+    // const handleOptionSelect = (option) => {
+    //     setSelectedOption(option);
+    // };
+    //
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault();
+    //
+    //     const formData = { selectedOption };
+    //     axios.post("/api/send-email", formData)
+    //         .then((response) => {
+    //             console.log("Email sent successfully");
+    //         })
+    //         .catch((error) => {
+    //             console.log("Error sending email: ", error);
+    //         });
+    // };
 
     return (
 
@@ -41,22 +46,22 @@ const Financing = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>Nie, zakup za gotówkę</b></p>
-                    <Link to="/address">
-                        <img className={'dom-firma-img'} src={roof1}/>
+                    <Link to="/address" state={{...state, financing: "zakup za gotówkę"}}>
+                        <img className={'dom-firma-img'} src={cash} alt={''}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
                 </div>
 
                 <div className={'firma'}>
-                    <p><b>Tak, proszę o ofertę.</b></p>
-                    <Link to="/address">
-                        <img className={'dom-firma-img'} src={roof2} alt="Firma"/>
+                    <p><b>Tak, proszę o ofertę</b></p>
+                    <Link to="/address" state={{...state, financing: "kredyt, proszę o ofertę"}}>
+                        <img className={'dom-firma-img'} src={kredyt} alt="Firma"/>
                     </Link>
                 </div>
 
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>
+            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
 
             {/*<div className="d-flex justify-content-center">*/}
             {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
