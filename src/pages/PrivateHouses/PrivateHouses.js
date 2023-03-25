@@ -1,4 +1,4 @@
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 
 import '../HomePage/HomePage.css'
@@ -6,13 +6,18 @@ import dom from "..//../image/house/house-1.png";
 import dom2 from "..//../image/house/house-2.png";
 import dom3 from "..//../image/house/house-3.png";
 import dom34 from "..//../image/house/house-3-4.png";
+import {Button} from "react-bootstrap";
 
 
 const PrivateHouses = () => {
 
     const {state} = useLocation();
 
+    const navigate  = useNavigate();
 
+    const handleClick = () => {
+        navigate('/');
+    };
 
     return (
         <div className={'text-main'}>
@@ -27,7 +32,7 @@ const PrivateHouses = () => {
                 <div>
                     <p><b>Dom jednorodzinny</b></p>
                     <Link to="/roof" state={{...state, type: "Dom jednorodzinny"}}>
-                        <img className={'dom-firma-img'} src={dom} alt={''} />
+                        <img width={'250'} className={'dom-firma-img'} src={dom} alt={''} />
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -35,7 +40,7 @@ const PrivateHouses = () => {
                 <div className={'firma'}>
                 <p><b>Dom bliźniak</b></p>
                     <Link to="/roof" state={{...state, type: "Dom bliźniak"}}>
-                        <img className={'dom-firma-img'} src={dom2} alt="Firma"/>
+                        <img width={'250'} className={'dom-firma-img'} src={dom2} alt="Firma"/>
                     </Link>
 
                 </div>
@@ -44,27 +49,23 @@ const PrivateHouses = () => {
                         wielorodzinny/
                         blok/kamienica</b></p>
                     <Link to="/roof" state={{...state, type: "Dom wielorodzinny/ blok/kamienica"}}>
-                        <img className={'dom-firma-img'} src={dom3} alt="Firma"/>
+                        <img width={'250'}  className={'dom-firma-img'} src={dom3} alt="Firma"/>
                     </Link>
 
                 </div>
                 <div className={'firma'}>
                     <p><b>Na gruncie
-
-                        (pominąć 2 i 3.
+                        (2 i 3.
                         przejść do pkt4)</b></p>
                     <Link to="/roof" state={{...state, type: "Na gruncie (pominąć 2 i 3. przejść do pkt4)"}}>
-                        <img className={'dom-firma-img'} src={dom34} alt="Firma"/>
+                        <img width={'250'} className={'dom-firma-img'} src={dom34} alt="Firma"/>
                     </Link>
 
                 </div>
             </div>
-            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
 
-            {/*<div className="d-flex justify-content-center">*/}
-            {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
-            {/*    </Button>*/}
-            {/*</div>*/}
+
         </div>
 
     )

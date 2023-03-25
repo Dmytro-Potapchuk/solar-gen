@@ -1,15 +1,21 @@
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 import roof1 from "../../image/roof/roof-0.png";
 import roof2 from "../../image/roof/roof-15.png";
 import roof3 from "../../image/roof/roof30.png";
+import {Button} from "react-bootstrap";
 
 const RoofCompany = () => {
 
     const {state} = useLocation()
     console.log(state)
 
+    const navigate  = useNavigate();
+
+    const handleClick = () => {
+        navigate('/commercial');
+    };
 
     return (
 
@@ -44,12 +50,9 @@ const RoofCompany = () => {
                     </Link>
                 </div>
             </div>
-            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
 
-            {/*<div className="d-flex justify-content-center">*/}
-            {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
-            {/*    </Button>*/}
-            {/*</div>*/}
+
         </div>
 
 

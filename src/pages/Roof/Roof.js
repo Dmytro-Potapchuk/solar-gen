@@ -1,14 +1,20 @@
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 import roof1 from "../../image/roof/roof-0.png";
 import roof2 from "../../image/roof/roof-15.png";
 import roof3 from "../../image/roof/roof30.png";
+import {Button} from "react-bootstrap";
 
 const Roof = () => {
 
     const {state} = useLocation()
 
+    const navigate  = useNavigate();
+
+    const handleClick = () => {
+        navigate('/private');
+    };
 
     return (
 
@@ -23,8 +29,8 @@ const Roof = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>Płaski</b></p>
-                    <Link to="/cover" state={{...state, roof: "Płaski"}}>
-                        <img className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
+                    <Link  to="/cover" state={{...state, roof: "Płaski"}}>
+                        <img width={200} className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -32,23 +38,20 @@ const Roof = () => {
 
                 <div className={'firma'}>
                     <p><b>Nachylony(&lt;15*)</b></p>
-                    <Link to="/cover" state={{...state, roof: "Nachylony(<15*)"}}>
-                        <img className={'dom-firma-img'} src={roof2} alt="Firma"/>
+                    <Link  to="/cover" state={{...state, roof: "Nachylony(<15*)"}}>
+                        <img width={200} className={'dom-firma-img'} src={roof2} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>Nachylony(&gt;15*)</b></p>
                     <Link to="/cover" state={{...state, roof: "Nachylony(>15*)>"}}>
-                        <img className={'dom-firma-img'} src={roof3} alt="Firma"/>
+                        <img width={200} className={'dom-firma-img'} src={roof3} alt="Firma"/>
                     </Link>
                 </div>
             </div>
-            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
 
-            {/*<div className="d-flex justify-content-center">*/}
-            {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
-            {/*    </Button>*/}
-            {/*</div>*/}
+
         </div>
 
 

@@ -22,9 +22,9 @@ const HomePage = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>DOMU</b></p>
-                    <Link to="/private" state={{id: "dom" }}>
+                    <Link to="/private" state={{in: "dom" }}>
 
-                        <img className={'dom-firma-img'} src={dom}/>
+                        <img className={'dom-firma-img'} src={dom} alt={'dom'}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -32,7 +32,7 @@ const HomePage = () => {
 
                 <div className={'firma'}>
                     <p><b>FIRMY</b></p>
-                    <Link to="/commercial"  state={{id: "firma"}}>
+                    <Link to="/commercial"  state={{in: "firma"}}>
                         <img className={'dom-firma-img'} src={firma} alt="Firma"/>
 
                     </Link>

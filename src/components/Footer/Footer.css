@@ -3,7 +3,7 @@
     background-color: #333;
     color: #fff;
     padding: 60px 0;
-    margin-top: 200px;
+    margin-top: auto;
 }
 
 .footer h3 {
@@ -22,12 +22,28 @@
 .social-icons li {
     display: inline-block;
     margin-right: 10px;
+
+
+
 }
 
-.social-icons li a {
+.social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.social-icons Li a {
     color: #fff;
     font-size: 24px;
     display: block;
+
+    text-decoration: none;
 }
 
 .footer-bottom {

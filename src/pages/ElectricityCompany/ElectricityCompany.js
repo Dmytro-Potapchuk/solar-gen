@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Button, Form} from "react-bootstrap";
 
 const ElectricityCompany = ({onSubmit}) => {
     const { state } = useLocation();
@@ -13,13 +14,19 @@ const ElectricityCompany = ({onSubmit}) => {
         onSubmit(energy);
     };
 
+    const navigate  = useNavigate();
+
+    const handleClickBack = () => {
+        navigate('/roof-cover-company');
+    };
 
     return (
-
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="energy">Podaj swoje roczne zużycie energii elektrycznej (kWh):</label>
+<>
+        <Form onSubmit={handleSubmit}  className="mx-auto" style={{width: "200px"}}>
+            <Form.Group htmlFor="energy"><b>Podaj swoje roczne zużycie energii elektrycznej (kWh):</b>
+            </Form.Group>
             <br />
-            <input
+            <Form.Control
                 type="text"
                 id="energy"
                 name="energy"
@@ -28,13 +35,17 @@ const ElectricityCompany = ({onSubmit}) => {
                 onChange={(event) => setEnergy(event.target.value)}
             />
             <br />
-            <button type="submit">
-                <Link to="/financing" state={{ ...state, energy: energy }}>
+    <Button className={'m-1'} variant={"primary"} onClick={() => handleClickBack("Dom")}>Cofni</Button>
+            <Button type="submit" className={'m-1'} variant={"primary"}>
+                <Link to="/financing-company" state={{ ...state, energy: energy }} className="text-decoration-none link-light">
                     Wyślij
                 </Link>
-            </button>
-        </form>
+            </Button>
+        </Form>
 
+
+
+</>
     );
 };
 

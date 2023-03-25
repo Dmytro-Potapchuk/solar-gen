@@ -1,5 +1,5 @@
 
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 import cement from "../../image/roofCover/cement.png";
 import ceramic from "../../image/roofCover/ceramic.png";
@@ -7,6 +7,7 @@ import ceramic from "../../image/roofCover/ceramic.png";
 import karpiowka from "../../image/roofCover/karpiowka.png";
 import metal from "../../image/roofCover/metal.png";
 import papa from "../../image/roofCover/papa.png";
+import {Button} from "react-bootstrap";
 
 // import {Button} from "react-bootstrap";
 // import axios from "axios";
@@ -14,8 +15,10 @@ import papa from "../../image/roofCover/papa.png";
 const RoofCover = () => {
 
     const {state} = useLocation()
-
-
+    const navigate  = useNavigate();
+    const handleClick = () => {
+        navigate('/roof');
+    };
 
     return (
 
@@ -61,12 +64,9 @@ const RoofCover = () => {
                     </Link>
                 </div>
             </div>
-            {/*<Button className={'m-5'} variant={"primary"} onClick={() => handleOptionSelect("Dom")}>Cofni</Button>*/}
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
 
-            {/*<div className="d-flex justify-content-center">*/}
-            {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
-            {/*    </Button>*/}
-            {/*</div>*/}
+
         </div>
 
 

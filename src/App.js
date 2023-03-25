@@ -8,15 +8,22 @@ import {HomePage} from "./pages/HomePage/HomePage";
 import './App.css'
 import {Footer} from "./components/Footer/Footer";
 import {Roof} from "./pages/Roof/Roof";
-import {EnergyConsumption} from "./pages/ EnergyConsumption/EnergyConsumption";
+
 import {RoofCover} from "./pages/RoofCover/RoofCover";
-import {EnergyStorage} from "./pages/ EnergyStorage/EnergyStorage";
-import {Financing} from "./pages/ Financing/Financing";
-import {AssemblyAddress} from "./pages/ AssemblyAddress/AssemblyAddress";
+
+
 import {Proposal} from "./pages/Proposal/Proposal";
 import {ElectricityCompany} from "./pages/ElectricityCompany/ElectricityCompany";
 import {RoofCoverCompany} from "./pages/RoofCoverCompany/RoofCoverCompany";
 import {RoofCompany} from "./pages/RoofCompany/RoofCompany";
+import {FinancingCompany} from "./pages/FinancingCompany/FinancingCompany";
+
+import {ProposalCompany} from "./pages/ProposalCompany/ProposalCompany";
+import {EnergyConsumption} from "./pages/EnergyConsumption/EnergyConsumption";
+import {EnergyStorage} from "./pages/EnergyStorage/EnergyStorage";
+import {Financing} from "./pages/Financing/Financing";
+import {AssemblyAddress} from "./pages/AssemblyAddress/AssemblyAddress";
+import {AssemblyAddressCompany} from "./pages/AssemblyAddressCompany/AssemblyAddressCompany";
 
 
 function App() {
@@ -43,11 +50,12 @@ function App() {
             <Route path={'/roof-company'} element={<RoofCompany/>}/>
             <Route path={'/roof-cover-company'} element={<RoofCoverCompany/>}/>\
             <Route path={'/electricity-company'} element={<ElectricityCompany/>}/>
+            <Route path={'/address-company'} element={<AssemblyAddressCompany/>}/>
+            <Route path={'/financing-company'} element={<FinancingCompany/>}/>
+            <Route path={'/proposal-company'} element={<ProposalCompany/>}/>
 
         </Routes>
-
 <Footer/>
-
     </div>
   );
 }

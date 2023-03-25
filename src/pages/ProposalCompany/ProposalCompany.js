@@ -3,17 +3,7 @@ import {useLocation, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import {Button, Form} from "react-bootstrap";
 
-
-
-const Proposal = () => {
-
-    const navigate  = useNavigate();
-
-    const handleClick = () => {
-        navigate('/address');
-    };
-
-
+const ProposalCompany = () => {
     const { state } = useLocation();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -33,6 +23,13 @@ const Proposal = () => {
             setTermsAccepted(termsAccepted);
         }
     }, []);
+
+    const navigate  = useNavigate();
+
+    const handleClick = () => {
+        navigate('/address-company');
+    };
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -66,13 +63,7 @@ const Proposal = () => {
         const currentState = JSON.stringify({ firstName, lastName, email, phone, termsAccepted });
         localStorage.setItem('proposalState', currentState);
     }, [firstName, lastName, email, phone, termsAccepted]);
-
-
-
-
-
     return (
-
         <Form onSubmit={handleSubmit} className="mx-auto" style={{width: "200px"}}>
             <div className='form-group'>
                 <label htmlFor='firstName'>Imię:</label>
@@ -92,7 +83,7 @@ const Proposal = () => {
             </div>
             <div className=' justify-content-center'>
                 <input type='checkbox' id='termsAccepted' name='termsAccepted' checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} className='justify-content-center' required />
-                    <br/>
+                <br/>
                 <label htmlFor='termsAccepted' >Akceptuję warunki.</label>
                 <p className='justify-content-lg-around'>
                     Akceptuję ogólne warunki i potwierdzam, że zapoznałem się z przepisami o ochronie danych firmy SOLARGEN. W każdej chwili możesz odwołać swoją zgodę na wykorzystanie danych, wysyłając wiadomość e-mail na adres info@solargen.pl
@@ -103,8 +94,7 @@ const Proposal = () => {
                 <Button className={"m-1 mt-2"} type='submit' >Wyślij</Button>
             </div>
         </Form>
-
     );
 };
 
-export {Proposal};
+export {ProposalCompany};
