@@ -31,7 +31,7 @@ const FinancingCompany = () => {
                 <div>
                     <p><b>Nie, zakup za gotówkę</b></p>
                     <Link to="/address-company" state={{...state, financing: "zakup za gotówkę"}}>
-                        <img className={'dom-firma-img'} src={cash} alt={''}/>
+                        <img width={300} className={'dom-firma-img'} src={cash} alt={''}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -40,7 +40,7 @@ const FinancingCompany = () => {
                 <div className={'firma'}>
                     <p><b>Tak, proszę o ofertę</b></p>
                     <Link to="/address-company" state={{...state, financing: "kredyt, proszę o ofertę"}}>
-                        <img className={'dom-firma-img'} src={kredyt} alt="Firma"/>
+                        <img width={300} className={'dom-firma-img'} src={kredyt} alt="Firma"/>
                     </Link>
                 </div>
 

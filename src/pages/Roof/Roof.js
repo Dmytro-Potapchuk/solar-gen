@@ -30,7 +30,7 @@ const Roof = () => {
                 <div>
                     <p><b>Płaski</b></p>
                     <Link  to="/cover" state={{...state, roof: "Płaski"}}>
-                        <img width={200} className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
+                        <img width={250} className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
                     </Link>
                     <div className="d-flex justify-content-center">
                     </div>
@@ -39,13 +39,13 @@ const Roof = () => {
                 <div className={'firma'}>
                     <p><b>Nachylony(&lt;15*)</b></p>
                     <Link  to="/cover" state={{...state, roof: "Nachylony(<15*)"}}>
-                        <img width={200} className={'dom-firma-img'} src={roof2} alt="Firma"/>
+                        <img width={250} className={'dom-firma-img'} src={roof2} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
                     <p><b>Nachylony(&gt;15*)</b></p>
                     <Link to="/cover" state={{...state, roof: "Nachylony(>15*)>"}}>
-                        <img width={200} className={'dom-firma-img'} src={roof3} alt="Firma"/>
+                        <img width={250} className={'dom-firma-img'} src={roof3} alt="Firma"/>
                     </Link>
                 </div>
             </div>
