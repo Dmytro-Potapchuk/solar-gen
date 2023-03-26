@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/solar-gen/static/css/main.2bbbf976.css",
+    "main.js": "/solar-gen/static/js/main.c0c85fec.js",
+    "static/media/kredyt.png": "/solar-gen/static/media/kredyt.3b34f214de0282f48209.png",
+    "static/media/metal.png": "/solar-gen/static/media/metal.122af08dd3aaf0263d27.png",
+    "static/media/papa.png": "/solar-gen/static/media/papa.8b6a076eadbe2fad11d9.png",
+    "static/media/cech.png": "/solar-gen/static/media/cech.397819ea0f585f8446b9.png",
+    "static/media/cement.png": "/solar-gen/static/media/cement.3d0c12941195adc93dcf.png",
+    "static/media/log-removebg-preview.png": "/solar-gen/static/media/log-removebg-preview.e15dc7dc8744b963aa90.png",
+    "static/media/ceramic.png": "/solar-gen/static/media/ceramic.da656da32db8e6b6e3cb.png",
+    "static/media/karpiowka.png": "/solar-gen/static/media/karpiowka.ef2530ee7867a3a60b99.png",
+    "static/media/house-3-4.png": "/solar-gen/static/media/house-3-4.276720f14a692e7ff40f.png",
+    "static/media/pomoc.png": "/solar-gen/static/media/pomoc.276720f14a692e7ff40f.png",
+    "static/media/five.png": "/solar-gen/static/media/five.5571bb53fb829d301e83.png",
+    "static/media/firma-removebg-preview.png": "/solar-gen/static/media/firma-removebg-preview.9ded45170868e31cdb19.png",
+    "static/media/office-computer-removebg-preview.png": "/solar-gen/static/media/office-computer-removebg-preview.9ded45170868e31cdb19.png",
+    "static/media/10kw.png": "/solar-gen/static/media/10kw.047fc2934aa2f9f2358d.png",
+    "static/media/factory.png": "/solar-gen/static/media/factory.8c07cafac935704f1825.png",
+    "static/media/dom.png": "/solar-gen/static/media/dom.f6281babda22bda2c9c1.png",
+    "static/media/0kw.png": "/solar-gen/static/media/0kw.8e0caf599b357d30583c.png",
+    "static/media/5kw.png": "/solar-gen/static/media/5kw.cdc1b8ac37d0856bd634.png",
+    "static/media/foo.png": "/solar-gen/static/media/foo.c6c600f9e4fe54038b6e.png",
+    "index.html": "/solar-gen/index.html",
+    "main.2bbbf976.css.map": "/solar-gen/static/css/main.2bbbf976.css.map",
+    "main.c0c85fec.js.map": "/solar-gen/static/js/main.c0c85fec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bbbf976.css",
+    "static/js/main.c0c85fec.js"
+  ]
+}
