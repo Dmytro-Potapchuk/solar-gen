@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/solar-gen/static/css/main.2bbbf976.css",
-    "main.js": "/solar-gen/static/js/main.cf86dbf4.js",
+    "main.css": "/solar-gen/static/css/main.f7aafbe9.css",
+    "main.js": "/solar-gen/static/js/main.834d9293.js",
     "static/media/kredyt.png": "/solar-gen/static/media/kredyt.3b34f214de0282f48209.png",
     "static/media/metal.png": "/solar-gen/static/media/metal.122af08dd3aaf0263d27.png",
     "static/media/papa.png": "/solar-gen/static/media/papa.8b6a076eadbe2fad11d9.png",
@@ -22,11 +22,11 @@
     "static/media/5kw.png": "/solar-gen/static/media/5kw.cdc1b8ac37d0856bd634.png",
     "static/media/foo.png": "/solar-gen/static/media/foo.c6c600f9e4fe54038b6e.png",
     "index.html": "/solar-gen/index.html",
-    "main.2bbbf976.css.map": "/solar-gen/static/css/main.2bbbf976.css.map",
-    "main.cf86dbf4.js.map": "/solar-gen/static/js/main.cf86dbf4.js.map"
+    "main.f7aafbe9.css.map": "/solar-gen/static/css/main.f7aafbe9.css.map",
+    "main.834d9293.js.map": "/solar-gen/static/js/main.834d9293.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bbbf976.css",
-    "static/js/main.cf86dbf4.js"
+    "static/css/main.f7aafbe9.css",
+    "static/js/main.834d9293.js"
   ]
 }
