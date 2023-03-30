@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom";
 import './HomePage.css'
-// import {Button} from "react-bootstrap";
 
-import dom from '../../image/png/dom.png'
-import firma from '../../image/png/firma-removebg-preview.png'
+
+import dom from '../../image/dom.png'
+import firma from '../../image/firma-removebg-preview.png'
 const HomePage = () => {
 
 
@@ -39,15 +39,6 @@ const HomePage = () => {
 
                 </div>
             </div>
-                        {/*<Button className={'m-5'} variant={"primary"} */}
-                        {/*        // onClick={() => handleOptionSelect("Dom")}>*/}
-                            {/*Cofni<*/}
-                            {/*/Button>*/}
-
-            {/*<div className="d-flex justify-content-center">*/}
-            {/*    <Button variant={"primary"} onClick={handleFormSubmit}>Wyślij*/}
-            {/*    </Button>*/}
-            {/*</div>*/}
         </div>
     );
 };

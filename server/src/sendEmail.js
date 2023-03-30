@@ -19,7 +19,7 @@ router.post('/send-email', (req, res) => {
     const mailOptions = {
         from: 'No reply',
         to: process.env.TO_EMAIL, // замініть на адресу отримувача
-        subject: 'New proposal submitted',
+        subject: 'New order',
         html: `
     <html>
       <head>
