@@ -13,6 +13,13 @@ const PrivateHouses = () => {
 
     const {state} = useLocation();
 
+
+    // const storedData = localStorage.getItem('data');
+    // if (storedData) {
+    //     const data = JSON.parse(storedData);
+    //     console.log(data.in);
+    // }
+
     const navigate  = useNavigate();
 
     const handleClick = () => {

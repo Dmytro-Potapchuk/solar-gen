@@ -7,7 +7,7 @@ import {Button} from "react-bootstrap";
 
 function CommercialBuildings() {
     const {state} = useLocation();
-    console.log(state);
+
 
 
     const navigate  = useNavigate();

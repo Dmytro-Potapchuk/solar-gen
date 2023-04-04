@@ -60,8 +60,7 @@ const Proposal = () => {
             .then((response) => {
                 console.log('Email sent successfully');
 
-                // Clear the saved state from localStorage on successful submit
-                // localStorage.removeItem('proposalState');
+
             })
             .catch((error) => {
                 console.log('Error sending email: ', error);
