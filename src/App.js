@@ -2,25 +2,19 @@ import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
-import {Header} from "./components/Header/Header";
-import {NavBar} from "./components/NavBar/NavBar";
-import {PrivateHouses} from "./pages/PrivateHouses/PrivateHouses";
-import {CommercialBuildings} from "./pages/CommercialBuildings/CommercialBuildings";
-import {HomePage} from "./pages/HomePage/HomePage";
-import {Footer} from "./components/Footer/Footer";
-import {Roof} from "./pages/Roof/Roof";
-import {RoofCover} from "./pages/RoofCover/RoofCover";
-import {Proposal} from "./pages/Proposal/Proposal";
-import {ElectricityCompany} from "./pages/ElectricityCompany/ElectricityCompany";
-import {RoofCoverCompany} from "./pages/RoofCoverCompany/RoofCoverCompany";
-import {RoofCompany} from "./pages/RoofCompany/RoofCompany";
-import {FinancingCompany} from "./pages/FinancingCompany/FinancingCompany";
-import {ProposalCompany} from "./pages/ProposalCompany/ProposalCompany";
-import {EnergyConsumption} from "./pages/EnergyConsumption/EnergyConsumption";
-import {EnergyStorage} from "./pages/EnergyStorage/EnergyStorage";
-import {Financing} from "./pages/Financing/Financing";
-import {AssemblyAddress} from "./pages/AssemblyAddress/AssemblyAddress";
-import {AssemblyAddressCompany} from "./pages/AssemblyAddressCompany/AssemblyAddressCompany";
+import {Footer, Header, NavBar} from "./components";
+import {
+    AssemblyAddress, AssemblyAddressCompany,
+    CommercialBuildings, ElectricityCompany,
+    EnergyConsumption,
+    EnergyStorage,
+    Financing, FinancingCompany,
+    HomePage,
+    PrivateHouses, Proposal, ProposalCompany,
+    Roof, RoofCompany,
+    RoofCover, RoofCoverCompany
+} from "./pages";
+
 
 
 function App() {
@@ -52,6 +46,7 @@ function App() {
             <Route path={'/proposal-company'} element={<ProposalCompany/>}/>
 
         </Routes>
+
 <Footer/>
     </div>
   );

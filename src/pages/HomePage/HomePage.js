@@ -15,7 +15,7 @@ const HomePage = () => {
 
             <br/>
 
-            <h4>Wybierz instalację dla:</h4>
+            <h1 className={'oferta'}>Szukam oferty dla:</h1>
             <br/>
             <br/>
 

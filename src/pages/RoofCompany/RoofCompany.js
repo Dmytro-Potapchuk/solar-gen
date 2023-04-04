@@ -38,19 +38,19 @@ const RoofCompany = () => {
                 </div>
 
                 <div className={'firma'}>
-                    <p><b>Nachylony(&lt;15*)</b></p>
+                    <p><b>Nachylony(≤15*)</b></p>
                     <Link to="/roof-cover-company" state={{...state, roof: "Nachylony(<15*)"}}>
                         <img width={'250'} className={'dom-firma-img'} src={roof2} alt="Firma"/>
                     </Link>
                 </div>
                 <div className={'firma'}>
-                    <p><b>Nachylony(&gt;15*)</b></p>
+                    <p><b>Nachylony(≥15*)</b></p>
                     <Link to="/roof-cover-company" state={{...state, roof: "Nachylony(>15*)>"}}>
                         <img width={'250'} className={'dom-firma-img'} src={roof3} alt="Firma"/>
                     </Link>
                 </div>
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Powrót</Button>
 
 
         </div>

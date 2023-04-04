@@ -44,9 +44,7 @@ function CommercialBuildings() {
 
                 </div>
                 <div className={'firma'}>
-                    <p><b>Na gruncie
-                         1 i 2
-                        przejść do pkt3)</b></p>
+                    <p><b>Na gruncie</b></p>
                     <Link to="/roof-company" state={{...state, type: "Na gruncie 1 i 2 "}}>
                         <img className={'dom-firma-img'} src={none} alt="Firma" width={200}/>
                     </Link>
@@ -54,7 +52,7 @@ function CommercialBuildings() {
                 </div>
 
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Powrót</Button>
 
 
         </div>

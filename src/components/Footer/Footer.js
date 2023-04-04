@@ -8,22 +8,23 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <h3>Kontakt</h3>
-                        <p>Dział handlowy: 881 611 411</p>
-                        <p>Wsparcie techniczne: 695 585 58 35</p>
+                        <h3>aktualne dane adresowe:</h3>
+                        <Link  to={"https://solargen.pl#kontakt"}>https://solargen.pl#kontakt</Link>
 
-                        <p>napisz do nas: </p>
-                        <p>info@solargen.pl</p>
-                        <p>solargen.pl</p>
+                        {/*<p>Dział handlowy: 881 611 411</p>*/}
+                        {/*<p>Wsparcie techniczne: 695 585 58 35</p>*/}
+                        {/*<p>napisz do nas: </p>*/}
+                        {/*<p>info@solargen.pl</p>*/}
+                        {/*<p>solargen.pl</p>*/}
 
 
                     </div>
 
 
                     <div className="col-md-6">
-                        <h3>biuro Zielona Góra</h3>
-                        <p>Adres: ul.Zjednoczenia 92,65-120 Zielona Góra</p>
-                        <p>NIP: 9291549800        Regon:  970661070</p>
+                        {/*<h3>biuro Zielona Góra</h3>*/}
+                        {/*<p>Adres: ul.Zjednoczenia 92,65-120 Zielona Góra</p>*/}
+                        {/*<p>NIP: 9291549800        Regon:  970661070</p>*/}
 
 
 

@@ -54,16 +54,14 @@ const PrivateHouses = () => {
 
                 </div>
                 <div className={'firma'}>
-                    <p><b>Na gruncie
-                        (2 i 3.
-                        przejść do pkt4)</b></p>
+                    <p><b>Na gruncie</b></p>
                     <Link to="/roof" state={{...state, type: "Na gruncie (pominąć 2 i 3. przejść do pkt4)"}}>
                         <img width={'250'} className={'dom-firma-img'} src={dom34} alt="Firma"/>
                     </Link>
 
                 </div>
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Powrót</Button>
 
 
         </div>

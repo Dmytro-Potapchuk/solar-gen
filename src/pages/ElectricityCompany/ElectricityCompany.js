@@ -35,7 +35,7 @@ const ElectricityCompany = ({onSubmit}) => {
                 onChange={(event) => setEnergy(event.target.value)}
             />
             <br />
-    <Button className={'m-1'} variant={"primary"} onClick={() => handleClickBack("Dom")}>Cofni</Button>
+    <Button className={'m-1'} variant={"primary"} onClick={() => handleClickBack("Dom")}>Powrót</Button>
             <Button type="submit" className={'m-1'} variant={"primary"}>
                 <Link to="/financing-company" state={{ ...state, energy: energy }} className="text-decoration-none link-light">
                     Wyślij

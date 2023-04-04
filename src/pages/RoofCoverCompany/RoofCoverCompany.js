@@ -66,7 +66,7 @@ const RoofCoverCompany = () => {
                     </Link>
                 </div>
             </div>
-            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Cofni</Button>
+            <Button className={'m-5'} variant={"primary"} onClick={() => handleClick("Dom")}>Powrót</Button>
 
 
         </div>
