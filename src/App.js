@@ -23,8 +23,6 @@ function App() {
         <NavBar/>
         <Header/>
 
-
-
         <Routes>
                 <Route path={'/'} element={<HomePage/>}/>
                  <Route path={'/private'} element={<PrivateHouses/>}/>

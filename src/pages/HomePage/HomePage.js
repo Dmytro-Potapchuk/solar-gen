@@ -7,10 +7,10 @@ import dom from '../../image/dom.png'
 import firma from '../../image/firma-removebg-preview.png'
 const HomePage = () => {
 
-    const handleLinkClick = (value) => {
-        const dataToStore = { in: value };
-        localStorage.setItem('data', JSON.stringify(dataToStore));
-    }
+    // const handleLinkClick = (value) => {
+    //     const dataToStore = { in: value };
+    //     localStorage.setItem('data', JSON.stringify(dataToStore));
+    // }
 
 
 
