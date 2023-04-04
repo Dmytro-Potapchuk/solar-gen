@@ -45,9 +45,9 @@ const Proposal = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        
         axios
-            .post('http://localhost:5100/api/send-email', {
+            .post("https://solargen-questionn.onrender.com/api/send-email", {
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
