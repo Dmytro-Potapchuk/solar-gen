@@ -6,7 +6,7 @@ import {Button, Col, Form, Row} from "react-bootstrap";
 import {Container} from "reactstrap";
 import PhoneInput from "react-phone-number-input";
 import 'react-phone-number-input/style.css';
-
+import Modal from 'react-bootstrap/Modal';
 
 const Proposal = () => {
 
@@ -17,6 +17,9 @@ const Proposal = () => {
     const [phone, setPhone] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
     const [message, setMessage] = useState('');
+
+    const [showModal, setShowModal] = useState(false);
+
 
     // Use useEffect to load any saved state from localStorage on component mount
     useEffect(() => {
@@ -59,7 +62,7 @@ const Proposal = () => {
             })
             .then((response) => {
                 console.log('Email sent successfully');
-
+                setShowModal(true);
 
             })
             .catch((error) => {
@@ -74,6 +77,9 @@ const Proposal = () => {
     }, [firstName, lastName, email, phone, termsAccepted, message]);
 
     return (
+
+
+
         <Container className="custom-container">
             <Form onSubmit={handleSubmit}>
                 <Row>
@@ -133,7 +139,24 @@ const Proposal = () => {
                     <Button className={"m-1 mt-2"} type='submit'>Wyślij</Button>
                 </div>
             </Form>
+
+            <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Formularz został wysłany</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    Dziękuję! Twój formularz został pomyślnie przesłany.
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={() => setShowModal(false)}>
+                        Zamknąć
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+
         </Container>
+
     );
 };
 

@@ -6,6 +6,7 @@ import {Button, Col, Form, Row} from "react-bootstrap";
 import {Container} from "reactstrap";
 import PhoneInput from "react-phone-number-input";
 import 'react-phone-number-input/style.css';
+import Modal from "react-bootstrap/Modal";
 
 const ProposalCompany = () => {
 
@@ -16,6 +17,8 @@ const ProposalCompany = () => {
     const [phone, setPhone] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
     const [message, setMessage] = useState('');
+
+    const [showModal, setShowModal] = useState(false);
 
     // Use useEffect to load any saved state from localStorage on component mount
     useEffect(() => {
@@ -57,7 +60,7 @@ const ProposalCompany = () => {
             })
             .then((response) => {
                 console.log('Email sent successfully');
-
+                setShowModal(true);
                 // Clear the saved state from localStorage on successful submit
                 // localStorage.removeItem('proposalState');
             })
@@ -132,6 +135,19 @@ const ProposalCompany = () => {
                 </div>
             </Form>
 
+            <Modal show={showModal} onHide={() => setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Formularz został wysłany</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    Dziękuję! Twój formularz został pomyślnie przesłany.
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={() => setShowModal(false)}>
+                        Zamknąć
+                    </Button>
+                </Modal.Footer>
+            </Modal>
 
         </Container>
     );
