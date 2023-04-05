@@ -17,8 +17,9 @@ const ProposalCompany = () => {
     const [phone, setPhone] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
     const [message, setMessage] = useState('');
-
     const [showModal, setShowModal] = useState(false);
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Use useEffect to load any saved state from localStorage on component mount
     useEffect(() => {
@@ -43,6 +44,7 @@ const ProposalCompany = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsSubmitting(true);
 
         axios
             .post(
@@ -72,6 +74,9 @@ const ProposalCompany = () => {
             })
             .catch((error) => {
                 console.log('Error sending email: ', error);
+            })
+            .finally(() => {
+                setIsSubmitting(false);
             });
     };
 
@@ -137,7 +142,12 @@ const ProposalCompany = () => {
                 <div className='text-center'>
                     <Button className={"m-1 mt-2"} variant={"primary"}
                             onClick={() => handleClick("Dom")}>Powrót</Button>
-                    <Button className={"m-1 mt-2"} type='submit'>Wyślij</Button>
+                    <Button className={"m-1 mt-2"} type='submit'           disabled={isSubmitting}>{isSubmitting ? 'Wysyłanie...' : 'Wyślij'}</Button>
+                    {showModal && (
+                        <div>
+                            Email sent successfully
+                        </div>
+                    )}
                 </div>
             </Form>
 

@@ -17,9 +17,9 @@ const Proposal = () => {
     const [phone, setPhone] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
     const [message, setMessage] = useState('');
-
     const [showModal, setShowModal] = useState(false);
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Use useEffect to load any saved state from localStorage on component mount
     useEffect(() => {
@@ -45,6 +45,7 @@ const Proposal = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsSubmitting(true);
         
         axios
             .post("https://solargen-questionn.onrender.com/api/send-email", {
@@ -67,6 +68,9 @@ const Proposal = () => {
             })
             .catch((error) => {
                 console.log('Error sending email: ', error);
+            })
+            .finally(() => {
+                setIsSubmitting(false);
             });
     };
 
@@ -136,7 +140,13 @@ const Proposal = () => {
                     <Button className={"m-1 mt-2"} variant={"primary"} type='button'
                             onClick={() => handleClick("Dom")}>Powrót</Button>
 
-                    <Button className={"m-1 mt-2"} type='submit'>Wyślij</Button>
+                    <Button className={"m-1 mt-2"} type='submit'           disabled={isSubmitting}>{isSubmitting ? 'Wysyłanie...' : 'Wyślij'}</Button>
+
+                    {showModal && (
+                        <div>
+                            Email sent successfully
+                        </div>
+                    )}
                 </div>
             </Form>
 
