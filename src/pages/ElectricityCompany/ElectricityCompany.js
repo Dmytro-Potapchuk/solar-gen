@@ -4,8 +4,9 @@ import {Link, useLocation, useNavigate} from "react-router-dom";
 import {Button, Form} from "react-bootstrap";
 
 const ElectricityCompany = ({onSubmit}) => {
+
     const { state } = useLocation();
-    console.log(state);
+
 
     const [energy, setEnergy] = useState("");
 
@@ -17,8 +18,16 @@ const ElectricityCompany = ({onSubmit}) => {
     const navigate  = useNavigate();
 
     const handleClickBack = () => {
-        navigate('/roof-cover-company');
+        if (state && state.roofCover) {
+            navigate('/roof-cover-company');
+        } else {
+            navigate('/commercial');
+        }
+
     };
+
+
+
 
     return (
 <>
@@ -35,7 +44,7 @@ const ElectricityCompany = ({onSubmit}) => {
                 onChange={(event) => setEnergy(event.target.value)}
             />
             <br />
-    <Button className={'m-1'} variant={"primary"} onClick={() => handleClickBack("Dom")}>Powrót</Button>
+    <Button className={'m-1'} variant={"primary"} onClick={() =>  handleClickBack("Dom")}>Powrót</Button>
             <Button type="submit" className={'m-1'} variant={"primary"}>
                 <Link to="/financing-company" state={{ ...state, energy: energy }} className="text-decoration-none link-light">
                     Wyślij

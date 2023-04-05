@@ -9,7 +9,7 @@ import {Button} from "react-bootstrap";
 const FinancingCompany = () => {
 
     const {state} = useLocation()
-    console.log(state);
+
 
     const navigate  = useNavigate();
 

@@ -9,7 +9,7 @@ import {Button} from "react-bootstrap";
 const RoofCompany = () => {
 
     const {state} = useLocation()
-    console.log(state)
+
 
     const navigate  = useNavigate();
 

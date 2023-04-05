@@ -15,7 +15,7 @@ import {Button} from "react-bootstrap";
 const RoofCoverCompany = () => {
 
     const {state} = useLocation()
-    console.log(state);
+
 
     const navigate  = useNavigate();
     const handleClick = () => {
