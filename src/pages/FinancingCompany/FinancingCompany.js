@@ -23,13 +23,13 @@ const FinancingCompany = () => {
 
             <br/>
 
-            <h4>Czy potrzebujesz finansowania?:</h4>
+            <h4>Jesteś zainteresowany dodatkowym finansowaniem instalacji fotowoltaicznej?</h4>
             <br/>
             <br/>
 
             <div className={"dom-firma"}>
                 <div>
-                    <p><b>Nie potrzebuję finansowania</b></p>
+                    <p><b>Nie, dziękuję</b></p>
                     <Link to="/address-company" state={{...state, financing: "zakup za gotówkę"}}>
                         <img width={200} className={'dom-firma-img'} src={cash} alt={''}/>
                     </Link>

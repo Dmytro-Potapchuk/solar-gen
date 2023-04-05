@@ -118,7 +118,7 @@ const ProposalCompany = () => {
                 </Form.Group>
                 <Form.Group controlId="message">
                     <Form.Label></Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Kody polecające Solargen"
+                    <Form.Control as="textarea" rows={3} placeholder="Dodatkowe informacje, pytanie"
                                   onChange={(e) => setMessage(e.target.value)}/>
                 </Form.Group>
 

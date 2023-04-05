@@ -1,6 +1,6 @@
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import firma1 from "../../image/companyBuild/factory.png";
-import none from "../../image/house/house-3-4.png";
+import none from "../../image/house/house-3-5.png";
 import firma2 from "../../image/companyBuild/office-computer-removebg-preview.png";
 import {Button} from "react-bootstrap";
 
@@ -45,7 +45,7 @@ function CommercialBuildings() {
                 </div>
                 <div className={'firma'}>
                     <p><b>Na gruncie</b></p>
-                    <Link to="/roof-company" state={{...state, type: "Na gruncie 1 i 2 "}}>
+                    <Link to="/electricity-company" state={{...state, type: "Na gruncie 1 i 2 "}}>
                         <img className={'dom-firma-img'} src={none} alt="Firma" width={200}/>
                     </Link>
 

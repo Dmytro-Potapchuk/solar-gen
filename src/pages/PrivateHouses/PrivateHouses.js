@@ -5,7 +5,7 @@ import '../HomePage/HomePage.css'
 import dom from "..//../image/house/house-1.png";
 import dom2 from "..//../image/house/house-2.png";
 import dom3 from "..//../image/house/house-3.png";
-import dom34 from "..//../image/house/house-3-4.png";
+import dom34 from "..//../image/house/house-3-5.png";
 import {Button} from "react-bootstrap";
 
 
@@ -62,7 +62,7 @@ const PrivateHouses = () => {
                 </div>
                 <div className={'firma'}>
                     <p><b>Na gruncie</b></p>
-                    <Link to="/roof" state={{...state, type: "Na gruncie (pominąć 2 i 3. przejść do pkt4)"}}>
+                    <Link to="/energy" state={{...state, type: "Na gruncie (pominąć 2 i 3. przejść do pkt4)"}}>
                         <img width={'250'} className={'dom-firma-img'} src={dom34} alt="Firma"/>
                     </Link>
 

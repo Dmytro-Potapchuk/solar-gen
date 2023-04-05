@@ -43,8 +43,6 @@ const ElectricityCompany = ({onSubmit}) => {
             </Button>
         </Form>
 
-
-
 </>
     );
 };
