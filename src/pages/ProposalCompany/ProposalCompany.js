@@ -92,22 +92,31 @@ const ProposalCompany = () => {
                 <Row>
                     <Col>
                         <Form.Group controlId="Imię:">
+                            {firstName ? null : <span className="text-danger">*</span>}
                             <Form.Label>Imię:</Form.Label>
                             <Form.Control type="text" placeholder="Enter first name"
-                                          onChange={(e) => setFirstName(e.target.value)}/>
+                                          onChange={(e) => setFirstName(e.target.value)}
+                                          required
+                            />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="Nazwisko:">
+                            {lastName ? null : <span className="text-danger">*</span>}
                             <Form.Label>Nazwisko:</Form.Label>
                             <Form.Control type="text" placeholder="Enter last name"
-                                          onChange={(e) => setLastName(e.target.value)}/>
+                                          onChange={(e) => setLastName(e.target.value)}
+                                          required
+                            />
                         </Form.Group>
                     </Col>
                 </Row>
                 <Form.Group controlId="email">
+                    {email ? null : <span className="text-danger">*</span>}
                     <Form.Label>Adres e-mail:</Form.Label>
-                    <Form.Control type="email" placeholder="Adres e-mail:" onChange={(e) => setEmail(e.target.value)}/>
+                    <Form.Control type="email" placeholder="Adres e-mail:" onChange={(e) => setEmail(e.target.value)}
+                                  required
+                    />
                 </Form.Group>
                 <Form.Group controlId="phone">
                     <Form.Label>Numer telefonu:</Form.Label>
