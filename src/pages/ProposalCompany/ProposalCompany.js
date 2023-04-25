@@ -7,8 +7,11 @@ import {Container} from "reactstrap";
 import PhoneInput from "react-phone-number-input";
 import 'react-phone-number-input/style.css';
 import Modal from "react-bootstrap/Modal";
+import './ProposalCompany.css'
 
 const ProposalCompany = () => {
+
+
 
     const {state} = useLocation();
     const [firstName, setFirstName] = useState('');
@@ -87,39 +90,53 @@ const ProposalCompany = () => {
     }, [firstName, lastName, email, phone, termsAccepted, message]);
 
     return (
-        <Container className="custom-container">
+
+        <Container
+            fluid
+            style={{ maxWidth: '50%', margin: '0 auto', paddingBottom: '17rem' }}
+        >
+            <h1>Został ostatni krok!</h1>
+            <h6>Uzupełnij swoje dane:</h6>
             <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col>
-                        <Form.Group controlId="Imię:">
-                            {firstName ? null : <span className="text-danger">*</span>}
-                            <Form.Label>Imię:</Form.Label>
-                            <Form.Control type="text" placeholder="Enter first name"
+                        <Form.Group controlId="Imię:" className="d-flex align-items-center">
+                            <Form.Label >
+
+                            </Form.Label>
+                            {firstName ? null : <span className="text-danger ">*</span>}
+                            <Form.Control size="lg" type="text" placeholder="Imię"
                                           onChange={(e) => setFirstName(e.target.value)}
                                           required
                             />
                         </Form.Group>
                     </Col>
                     <Col>
-                        <Form.Group controlId="Nazwisko:">
+                        <Form.Group controlId="Nazwisko:" className="d-flex align-items-center">
                             {lastName ? null : <span className="text-danger">*</span>}
-                            <Form.Label>Nazwisko:</Form.Label>
-                            <Form.Control type="text" placeholder="Enter last name"
+                            <Form.Label></Form.Label>
+                            <Form.Control size="lg" type="text" placeholder="Nazwisko:"
                                           onChange={(e) => setLastName(e.target.value)}
                                           required
                             />
                         </Form.Group>
                     </Col>
                 </Row>
-                <Form.Group controlId="email">
+                <Form.Label >
+
+                </Form.Label>
+
+                <Form.Group controlId="email" className="d-flex align-items-center">
                     {email ? null : <span className="text-danger">*</span>}
-                    <Form.Label>Adres e-mail:</Form.Label>
-                    <Form.Control type="email" placeholder="Adres e-mail:" onChange={(e) => setEmail(e.target.value)}
+                    <Form.Label></Form.Label>
+                    <Form.Control size="lg" type="email" placeholder="e-mail:" onChange={(e) => setEmail(e.target.value)}
                                   required
                     />
                 </Form.Group>
-                <Form.Group controlId="phone">
-                    <Form.Label>Numer telefonu:</Form.Label>
+
+                <Form.Group    controlId="phone">
+
+                    <Form.Label></Form.Label>
                     <PhoneInput
                         name='phone'
                         id='phone'
@@ -130,12 +147,16 @@ const ProposalCompany = () => {
                         onChange={setPhone}
                     />
                 </Form.Group>
+
+
                 <Form.Group controlId="message">
+
                     <Form.Label></Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Dodatkowe informacje, pytanie"
+                    <Form.Control size="lg" type="text" rows={3} placeholder="Dodatkowe informacje:"
                                   onChange={(e) => setMessage(e.target.value)}/>
                 </Form.Group>
 
+                {termsAccepted ? null : <span className="text-danger">*</span>}
                 <input type='checkbox' id='termsAccepted' name='termsAccepted' checked={termsAccepted}
                        onChange={(e) => setTermsAccepted(e.target.checked)} className='justify-content-center'
                        required/>

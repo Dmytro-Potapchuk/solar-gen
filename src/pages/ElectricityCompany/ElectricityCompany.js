@@ -20,9 +20,9 @@ const ElectricityCompany = () => {
     const handleClickBack = () => {
         if (state && state.roofCover) {
             navigate('/roof-cover-company');
-        } else {
-            navigate('/commercial');
-        }
+        } else if (state && state.roof) {
+            navigate('/roof-company');
+        } else navigate('/commercial');
 
     };
     const isEnergyValid = energy.trim() !== '';
@@ -63,10 +63,10 @@ const ElectricityCompany = () => {
                     state={{ ...state, energy: energy }}
                     className="text-decoration-none link-light"
                 >
-                    Wyślij
+                    Dalej
                 </Link>
             ) : (
-                'Wyślij'
+                'Dalej'
             )}
         </Button>
     </Form>

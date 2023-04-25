@@ -30,7 +30,7 @@ const RoofCompany = () => {
             <div className={"dom-firma"}>
                 <div>
                     <p><b>Płaski</b></p>
-                    <Link to="/roof-cover-company" state={{...state, roof: "Płaski"}}>
+                    <Link to="/electricity-company" state={{...state, roof: "Płaski"}}>
                         <img width={'250'} className={'dom-firma-img'} src={roof1} alt={'Płaski'}/>
                     </Link>
                     <div className="d-flex justify-content-center">

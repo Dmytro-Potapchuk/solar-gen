@@ -1,0 +1,110 @@
+
+.PhoneInputCountry {
+    width: 5em;
+    border: none;
+    outline: none;
+    background: none;
+
+    -webkit-appearance: none;
+    -webkit-transition-property: all;
+    transition-property: all;
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 500;
+    font-family: sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0.8em;
+    background: #eee;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+    border: 0 none #bedce1;
+}
+.PhoneInputInput {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-transition-property: all;
+    transition-property: all;
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 500;
+    font-family: sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0.8em;
+    background: #eee;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+
+
+
+}
+
+.form-control {
+
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-transition-property: all;
+    transition-property: all;
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 500;
+    font-family: sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0.8em;
+    background: #eee;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+    border: 0 none #bedce1;
+}
+
+
+
+.form-select {
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-transition-property: all;
+    transition-property: all;
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 500;
+    font-family: sans-serif;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0.8em;
+    background: #eee;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+    border: 0 none #bedce1;
+
+}
+
+#phone:focus {
+    background-color: #fff; /* змінюємо колір фону на білий при фокусуванні */
+}
+
+.PhoneInputInput:focus {
+    outline: none; /* забрати зображення обведення */
+    border-color: #ced4da; /* змінити колір рамки при фокусі */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* додати ефект тіні */
+}
+
+.PhoneInput:focus-within .form-control {
+    background-color: #fff; /* змінити колір фону форми при фокусі */
+    border-color: #80bdff; /* змінити колір рамки форми при фокусі */
+}
+
+
+#message::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
