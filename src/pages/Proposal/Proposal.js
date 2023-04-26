@@ -26,12 +26,14 @@ const Proposal = () => {
     useEffect(() => {
         const savedState = localStorage.getItem('proposalState');
         if (savedState) {
-            const {firstName, lastName, email, phone, termsAccepted, message} = JSON.parse(savedState);
+            const {firstName, lastName, email, phone,
+                // termsAccepted,
+                message} = JSON.parse(savedState);
             setFirstName(firstName);
             setLastName(lastName);
             setEmail(email);
             setPhone(phone);
-            setTermsAccepted(termsAccepted);
+            // setTermsAccepted(termsAccepted);
             setMessage(message)
         }
     }, []);
@@ -77,16 +79,20 @@ const Proposal = () => {
 
     // Use useEffect to save the current state to localStorage whenever it changes
     useEffect(() => {
-        const currentState = JSON.stringify({firstName, lastName, email, phone, termsAccepted, message});
+        const currentState = JSON.stringify({firstName, lastName, email, phone,
+            // termsAccepted,
+            message});
         localStorage.setItem('proposalState', currentState);
-    }, [firstName, lastName, email, phone, termsAccepted, message]);
+    }, [firstName, lastName, email, phone,
+        // termsAccepted,
+        message]);
 
     return (
 
 
         <Container
             fluid
-            style={{maxWidth: '50%', margin: '0 auto', paddingBottom: '17rem'}}
+            style={{maxWidth: '50%', minWidth: '400px', margin: '0 auto', paddingBottom: '17rem'}}
         >
             <h1>Został ostatni krok!</h1>
             <h6>Uzupełnij swoje dane:</h6>
@@ -113,7 +119,7 @@ const Proposal = () => {
                         </Form.Group>
                     </Col>
                 </Row>
-                <Form.Label >
+                <Form.Label>
 
                 </Form.Label>
                 <Form.Group controlId="email" className="d-flex align-items-center">
@@ -154,7 +160,7 @@ const Proposal = () => {
                         Akceptuję ogólne warunki i potwierdzam, że zapoznałem się z przepisami o ochronie danych firmy
                         SOLARGEN. W każdej chwili możesz odwołać swoją zgodę na wykorzystanie danych, wysyłając
                         wiadomość
-                        e-mail na adres info@solargen.pl
+                        e-mail na adres: info@solargen.pl
                     </b>
                 </p>
                 <div className='text-center'>
